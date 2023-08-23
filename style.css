@@ -118,7 +118,7 @@ img {
   display: inline-block;
   font-weight: bold;
   padding: 1rem 0rem;
-  text-decoration: none;
+/*   text-decoration: none; */
 }
 
 /* styling for nav links on hover*/
@@ -155,7 +155,7 @@ img {
   display: inline-block;
   font-weight: normal;
   padding: 0rem 0.25rem;
-  text-decoration: none;
+  text-decoration: none; /* hides underline */
 }
 
 .nav-menu a:hover {
@@ -276,6 +276,26 @@ width: 100%;height: 100%;
 .footer p {
   color: var(--gray500);
 }
+
+
+/* start blur */
+/* TODO: - not used yet*/
+/* 
+.gradient-blur {
+	width: 100%;
+	position: fixed;
+	height: 160px;
+	top: 0px;
+	-webkit-backdrop-filter: blur(30px);
+	background-attachment: fixed;
+	mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%, rgb(0, 0, 0) 80%, rgb(0, 0, 0) 90%);
+	transform: rotate(180deg);
+}
+ */
+/* add a <div class=gradient-blur> to index to get working */
+/* end blur */
+
+
 
 /* make links in footer gray, no links yet */
 /*
