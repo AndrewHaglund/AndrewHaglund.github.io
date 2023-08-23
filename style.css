@@ -1,0 +1,284 @@
+/* Light Mode colors */
+:root {
+	--gray100: #fff;
+	--gray300: #d3d3d3;
+	--gray500: #808080;
+	--gray700: #545454;
+	--gray800: #404040;
+	--gray900: #333;
+	--blue: #007AFF; /* iOS Blue = 007AFF - web blue = 0000ff */
+	--blueDark: #00008b;
+	--buttonLabel: #fff;
+}
+
+/* Dark Mode colors */
+@media (prefers-color-scheme: dark) {
+	:root {
+	--gray100: #000;
+	--gray300: #414141;
+	--gray500: #949494;
+	--gray700: #b0b0b0;
+	--gray800: #D9D9D9;
+	--gray900: #fff;
+	--blue: #42A2FF; /*0000ff*/
+	--blueDark: #007AFF; /* previous 0000ff */
+	--buttonLabel: #fff;
+	}
+}
+
+/* HTML for dynamic type */
+@supports (font: -apple-system-body) {
+	html {
+		font: -apple-system-body;
+
+		/* Hyphenation rules */
+		-webkit-hyphens: auto;
+		-webkit-hyphenate-limit-before: 3;
+		-webkit-hyphenate-limit-after: 3;
+		-webkit-hyphenate-limit-chars: 8 3 3;
+		-webkit-hyphenate-limit-lines: 2;
+		-webkit-hyphenate-limit-last: always;
+		-webkit-hyphenate-limit-zone: 8%;
+
+		-moz-hyphens: auto;
+		-moz-hyphenate-limit-chars: 8 3 3;
+		-moz-hyphenate-limit-lines: 2;
+		-moz-hyphenate-limit-last: always;
+		-moz-hyphenate-limit-zone: 8%;
+
+		-ms-hyphens: auto;
+		-ms-hyphenate-limit-chars: 8 3 3;
+		-ms-hyphenate-limit-lines: 2;
+		-ms-hyphenate-limit-last: always;
+		-ms-hyphenate-limit-zone: 8%;
+
+		hyphens: auto;
+		hyphenate-limit-chars: 8 3 3;
+		hyphenate-limit-lines: 2;
+		hyphenate-limit-last: always;
+		hyphenate-limit-zone: 8%;
+	}
+}
+
+/* Body defines overall page padding and width */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  max-width: 648px;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  background-color: var(--gray100);
+  color: var(--gray900); /*font color*/
+  padding: 0rem 1rem;
+}
+
+/* hr is the horizontal rule line border */
+hr {
+  border: 0.5px solid var(--gray300);
+}
+
+/* p is for paragraph*/
+p {
+  line-height: 150%;
+  color: var(--gray800);
+  padding-bottom: 1.5rem;
+}
+
+/* link styling */
+a {
+	color: var(--blue);
+}
+
+img {
+	/* background-color: var(--gray300);*/ /*used for local testing */
+	border-radius: 24px;
+}
+
+/* styling for the nav itself */
+.nav {
+    background-color: var(--gray100);
+	position: sticky;
+	top: 0px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 1rem;
+	margin-bottom: 4rem;
+/* 
+
+ */
+  /*
+  background-color: #313236;
+  border-radius: 0.125rem;
+  max-width: 100%;
+  */
+}
+
+/* styling for nav links*/
+.nav a {
+  color: var(--gray500);
+  display: inline-block;
+  font-weight: bold;
+  padding: 1rem 0rem;
+  text-decoration: none;
+}
+
+/* styling for nav links on hover*/
+/* .nav a:hover { */
+/*   color: var(--blue); */
+/* } */
+
+.nav li {
+  color: var(--blue);
+  font-weight: bolder;
+  display: inline;
+  float: right;
+  padding: 1rem 0.5rem;
+}
+
+/* TODO: - clean up CSS for nav, messy and unclear */
+
+/* styling for left side of nav */
+.nav-branding a {
+  color: var(--gray500);
+  display: inline-block;
+  font-weight: bold;
+  padding: 1rem 0rem;
+  text-decoration: none;
+}
+
+.nav-branding a:hover {
+  color: var(--blue);
+}
+
+/* styling for right side of nav */
+.nav-menu a {
+  color: var(--gray500);
+  display: inline-block;
+  font-weight: normal;
+  padding: 0rem 0.25rem;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: var(--blue);
+}
+
+/* TODO: - fix this. hides nav-menu if smaller than 600 responsive mobile */
+/* need to implement responsive menu like these */
+/* https://1stwebdesigner.com/pure-css-navigation-menus/ */
+/* no javascript */
+@media only screen and (max-width: 600px) {
+	.nav-menu {
+		display: none;
+		/* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
+/* 		grid-gap: 1rem; */
+	}
+}
+
+
+
+/* styling for text field input and textarea */
+input, textarea {
+    box-sizing: border-box;
+    resize: none;
+	font-size: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--gray100);
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: var(--gray300);
+    border-radius: 0.5rem;
+    color: var(--gray700)
+}
+
+
+button {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: var(--buttonLabel);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--blue);
+    border-style: none;
+    border-radius: 0.7rem;
+    transition-duration: 0.2s;
+    cursor: pointer;    
+}
+
+/* styling for button on hover*/
+button:hover {
+  transform: translateY(0.25rem);
+  transform: scale(105%);
+}
+
+button:active {
+  background-color: var(--blueDark);
+  transform: translateY(0.25rem);
+  transform: scale(95%);
+}
+
+/* styling for button when disabled*/
+button:disabled {
+  background-color: var(--gray300);
+}
+
+
+
+
+
+/* desktop grid size */
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 1rem;
+	margin-bottom: 4rem;
+}
+
+/* mobile grid sizing */
+
+@media only screen and (max-width: 600px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		grid-gap: 1rem;
+	}
+}
+
+/* 
+Used a guide https://css-tricks.com/a-grid-of-logos-in-squares/
+I want a fixed 2:1 grid so any img fills that ratio, not working currently
+Workaround is to export at same aspect
+*/
+
+.grid > div {
+  content: "";
+  display: grid;
+}
+
+.grid > div > img {
+width: 100%;height: 100%;
+	object-fit: contain;
+	border-radius: 12px;
+}
+
+
+
+
+
+.footer {
+  padding: 2rem 0rem;
+}
+
+.footer p {
+  color: var(--gray500);
+}
+
+/* make links in footer gray, no links yet */
+/*
+.footer a {
+  color: var(--gray500);
+}*/
