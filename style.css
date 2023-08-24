@@ -70,6 +70,10 @@ body {
   color: var(--gray900); /*font color*/
   padding: 0rem 1rem;
 }
+/* h4 currently used as header in resume */
+h4 {
+  color: var(--gray500);
+}
 
 /* hr is the horizontal rule line border */
 hr {
