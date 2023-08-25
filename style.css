@@ -63,7 +63,7 @@
 /* Body defines overall page padding and width */
 body {
   font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  max-width: 648px;
+  max-width: 768px; /* previous 648 */
   font-size: 1.1rem;
   margin: 0 auto;
   background-color: var(--gray100);
