@@ -87,6 +87,12 @@ p {
   padding-bottom: 1.5rem;
 }
 
+ul {
+  line-height: 150%;
+  color: var(--gray800);
+  padding-bottom: 1.5rem;
+}
+
 /* link styling */
 a {
 	color: var(--blue);
