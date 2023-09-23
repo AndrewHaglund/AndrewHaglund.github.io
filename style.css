@@ -103,6 +103,10 @@ img {
 	border-radius: 24px;
 }
 
+img:active {
+	-webkit-transform: scale(2)
+}
+
 /* styling for the nav itself */
 .nav {
     background-color: var(--gray100);
