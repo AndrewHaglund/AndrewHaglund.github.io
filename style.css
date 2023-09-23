@@ -103,18 +103,6 @@ img {
 	border-radius: 24px;
 }
 
-img:hover {
-	cursor: zoom-in;
-	transition-duration: 500ms, 200ms;
-}
-
-img:active {
-	transform: scale(2);
-	box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-	cursor: zoom-out;	
-}
-
-
 
 /* styling for the nav itself */
 .nav {
